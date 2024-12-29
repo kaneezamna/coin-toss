@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #f49c5e, #a2aa58e8, #a15aed, #ed6098);
+    background-size: 400% 400%;
+    animation: gradientShift 6s ease infinite;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Coin Display */
+.coin {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    /* background: linear-gradient(45deg, #487eeb, #a2aa58e8); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* transition: background 0.5s ease, transform 0.8s ease; */
+}
+
+
+
+/* Button Styling */
+button {
+    padding: 12px 30px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(45deg, #9b59b6, #2980b9);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(155, 89, 182, 0.5);
+}
+
+button:active {
+    transform: translateY(3px);
+}
+
+/* Result Text */
+.result {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeResult 0.8s ease forwards;
+}
+
+@keyframes fadeResult {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
